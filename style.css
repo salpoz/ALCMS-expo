@@ -1,0 +1,636 @@
+/*
+ #d6eae0 background color
+ #1a1a1a aerodrome color
+*/
+
+:root {
+  --background-color: grey;
+  --aerodrome: #1a1a1a;
+  --panel-background: #2f4a3d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-color);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  width: 99vw;
+  height: 15rem;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  bottom: 0;
+  background: var(--panel-background);
+}
+
+.panel-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border: 2px solid yellow;
+  color: white;
+}
+
+.btn {
+  width: 10rem;
+  padding: 0.8rem;
+  margin: 2rem;
+  border-radius: 10px;
+  background: #666666;
+  font-size: medium;
+}
+button:hover {
+  background: #999999;
+}
+
+.on {
+  background: green;
+}
+
+.on:hover {
+  background: rgb(84, 209, 84);
+}
+h3 {
+  display: inline-block;
+}
+
+.container {
+  width: 100%;
+  height: 20rem;
+  display: grid;
+  place-items: center;
+}
+
+h1,
+h3 {
+  color: white;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+}
+/* img {
+  position: relative;
+  top: 12px;
+  right: -40px;
+  zoom: 110%;
+  rotate: 359deg;
+  width: 80rem;
+  height: 20rem;
+  object-fit: fill;
+  opacity: 0.5;
+} */
+.aerodrome {
+  position: absolute;
+  margin-top: 7rem;
+  width: 65rem;
+  height: 8.5rem;
+  zoom: 110%;
+  border-radius: 0 0 0 71%;
+  background-color: var(--aerodrome);
+}
+
+.runway {
+  position: relative;
+  top: 0.2px;
+  bottom: 0.1em;
+  left: 0em;
+  /* width: 45.2em; */
+  width: 61em;
+  height: 1.9em;
+}
+
+.runway-top {
+  position: relative;
+  left: 0.5em;
+  width: inherit;
+  display: flex;
+  gap: 13px;
+}
+
+.runway-center {
+  display: flex;
+  justify-content: space-between;
+}
+.runway-left {
+  position: relative;
+  left: 7.2em;
+  bottom: 0.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2px;
+}
+.runway-right {
+  position: relative;
+  right: 6em;
+  bottom: 0.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2px;
+}
+.runway-bottom {
+  position: relative;
+  left: 0.5em;
+  bottom: 0.2em;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+}
+
+.delta-container {
+  width: 65em;
+  height: 3.3em;
+  position: absolute;
+
+  top: 2em;
+  left: 2em;
+  display: flex;
+}
+.delta-strip-1 {
+  width: 5.7em;
+  height: 2.1em;
+  background: var(--background-color);
+  border-radius: 0 20% 40% 100%;
+}
+
+.delta-strip-2 {
+  width: 9.8em;
+  height: 3em;
+  background: var(--background-color);
+  position: relative;
+  left: 1.2em;
+  border-radius: 10px 15px 15px 30%;
+}
+
+.delta-strip-3 {
+  width: 12em;
+  height: 3.1em;
+  background: var(--background-color);
+  position: relative;
+  left: 2.3em;
+  border-radius: 15px;
+}
+
+.delta-strip-4 {
+  width: 12em;
+  height: 3.2em;
+  background: var(--background-color);
+  position: relative;
+  left: 3em;
+  border-radius: 15px;
+}
+
+.delta-strip-5 {
+  width: 8em;
+  height: 3.2em;
+  background: var(--background-color);
+  position: relative;
+  left: 4em;
+  border-radius: 15px;
+}
+
+.delta-strip-6 {
+  width: 5.5em;
+  height: 3.2em;
+  background: var(--background-color);
+  position: relative;
+  left: 5em;
+  border-radius: 15px;
+}
+
+.delta-strip-7 {
+  width: 4em;
+  height: 3.2em;
+  background: var(--background-color);
+  position: relative;
+  left: 6em;
+  border-radius: 15px 0 0 15px;
+}
+
+.charlie-container {
+  width: 52.5em;
+  height: 1.4em;
+
+  position: absolute;
+  border-radius: 0 0 0 20%;
+  left: 10.2em;
+  top: 5.1em;
+}
+
+.bravo-container {
+  width: 35em;
+  height: 1.3em;
+  position: absolute;
+  top: 6.5em;
+  left: 29em;
+  display: flex;
+}
+
+.bravo-strip-1 {
+  width: 1.8em;
+  height: 1.3em;
+  background: var(--background-color);
+  position: relative;
+  left: 0.8em;
+  border-radius: 40%;
+}
+
+.bravo-strip-2 {
+  width: 1.8em;
+  height: 1.3em;
+  background: var(--background-color);
+  position: relative;
+  left: 1.6em;
+  border-radius: 40%;
+}
+
+.bravo-strip-3 {
+  width: 9.8em;
+  height: 1.3em;
+  background: var(--background-color);
+  position: relative;
+  left: 2em;
+  border-radius: 10%;
+}
+
+.bravo-strip-4 {
+  width: 1.6em;
+  height: 1.3em;
+  background: var(--background-color);
+  position: relative;
+  left: 2.4em;
+  border-radius: 40%;
+}
+
+.bravo-strip-5 {
+  width: 3em;
+  height: 1.3em;
+  background: var(--background-color);
+  position: relative;
+  left: 2.9em;
+  border-radius: 40%;
+}
+
+.bravo-strip-6 {
+  width: 1.5em;
+  height: 1.3em;
+  background: var(--background-color);
+  position: relative;
+  left: 3.7em;
+  border-radius: 40%;
+}
+
+.bravo-strip-7 {
+  width: 3em;
+  height: 1.3em;
+  background: var(--background-color);
+  position: relative;
+  left: 4.2em;
+  border-radius: 10px;
+}
+
+.bravo-strip-8 {
+  width: 5em;
+  height: 1.3em;
+  background: var(--background-color);
+  position: relative;
+  left: 5em;
+  border-radius: 10px;
+}
+
+.bravo-strip-9 {
+  width: 3em;
+  height: 1.3em;
+  background: var(--background-color);
+  position: relative;
+  left: 6em;
+  border-radius: 10px;
+}
+
+.hide-1 {
+  position: relative;
+  width: 18.8em;
+  height: 1.8em;
+  left: 10em;
+  top: 4.7em;
+
+  border-radius: 0 10px 10% 0;
+  background: var(--background-color);
+}
+
+.ld::before {
+  position: absolute;
+  content: "18";
+  left: 10em;
+  color: white;
+  rotate: 90deg;
+  font-size: 1em;
+  top: 0.6em;
+  font-family: monospace;
+  opacity: 0.5;
+}
+.ld::after {
+  content: "36";
+  color: white;
+  position: absolute;
+  right: 8.5em;
+  font-size: 1em;
+  top: 0.6em;
+  font-family: monospace;
+  opacity: 0.5;
+  rotate: -90deg;
+}
+
+.light {
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+}
+.white {
+  background: white;
+}
+
+.red {
+  background: red;
+}
+.blue {
+  background: blue;
+}
+.movement-area {
+  position: relative;
+  display: flex;
+  top: 4em;
+  left: 28.8em;
+  width: 36.2em;
+  height: 3em;
+  background: var(--background-color);
+}
+
+.hide-2 {
+  position: absolute;
+  width: 3.8em;
+  background: var(--background-color);
+  height: 2.7em;
+  right: 0;
+  top: 0;
+}
+.papi-18 {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 0.5em;
+  height: 2em;
+  left: 17.5em;
+  top: -2.3em;
+}
+
+.papi-36 {
+  position: absolute;
+  display: none;
+  width: 0.5em;
+  height: 2em;
+  right: 14em;
+  top: 2.2em;
+  z-index: 2;
+}
+
+.papi-box {
+  width: inherit;
+  height: 0.5em;
+}
+
+.runway-centerline {
+  position: absolute;
+  left: 0.9em;
+  top: 0.9em;
+  display: flex;
+  gap: 13px;
+}
+
+.approach-18 {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0.45em;
+  left: -6em;
+  width: 12em;
+  height: 1em;
+}
+
+.approach-bar {
+  display: flex;
+  flex-direction: column;
+}
+.approach-bar-long {
+  position: relative;
+  bottom: 0.55em;
+  height: fit-content;
+}
+
+.approach-36 {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: -8em;
+  top: 0.45em;
+  width: 12em;
+  height: 1em;
+  z-index: 2;
+}
+
+.north-apron {
+  width: 5em;
+  height: 2.5em;
+  background: var(--aerodrome);
+  outline: 2px solid #1a1a1a;
+}
+
+.bravo-patch {
+  position: absolute;
+  width: 1.5em;
+  left: 4.5em;
+  height: 1.2em;
+  background: var(--background-color);
+}
+.domestic-apron {
+  position: absolute;
+  left: 15.5em;
+  width: 7em;
+  height: 2.6em;
+  background: var(--aerodrome);
+}
+.international-apron-1 {
+  position: absolute;
+  width: 7em;
+  height: 3.2em;
+  right: 7em;
+  background: var(--aerodrome);
+}
+.international-apron-2 {
+  position: absolute;
+  width: 8em;
+  height: 3.2em;
+  right: -1em;
+  background: var(--aerodrome);
+}
+
+.logs-container {
+  width: 40rem;
+  height: inherit;
+}
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.charlie-container {
+  position: absolute;
+  left: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.taxiway-charlie-bottom {
+  display: flex;
+  gap: 1em;
+}
+.taxiway-charlie-top {
+  display: flex;
+  gap: 1em;
+}
+
+.c-top-b1 {
+  position: absolute;
+  left: -1.3em;
+  display: flex;
+  gap: 1em;
+}
+.c-top-b2 {
+  position: absolute;
+  left: 8.5em;
+  display: flex;
+  gap: 1em;
+}
+.c-top-b3 {
+  position: absolute;
+  left: 21.1em;
+  top: 0.1em;
+  display: flex;
+  gap: 1em;
+}
+.c-top-b4 {
+  position: absolute;
+  left: 34em;
+  top: 0.1em;
+  display: flex;
+  gap: 1em;
+}
+.c-top-b5 {
+  position: absolute;
+  left: 43em;
+  top: 0.1em;
+  display: flex;
+  gap: 1em;
+}
+.charlie-bend {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15em;
+  bottom: 1.5em;
+  rotate: 12deg;
+  height: 1.2em;
+  outline: red;
+  left: -15em;
+}
+
+.bend-top {
+  position: relative;
+  display: flex;
+  left: 3.4em;
+  gap: 1em;
+}
+.bend-bottom {
+  position: relative;
+  left: 2.2em;
+  display: flex;
+  gap: 1em;
+}
+
+.ct-1 {
+  position: relative;
+  top: -1em;
+  left: 0.8em;
+}
+.ct-2 {
+  position: relative;
+  top: -0.1em;
+  left: 0.1em;
+}
+
+.ct-3 {
+  position: relative;
+  top: 0.2em;
+}
+
+.ct-4 {
+  position: relative;
+  top: 0.3em;
+}
+.ct-5 {
+  position: relative;
+  top: 0.3em;
+}
+
+.cb-1 {
+  position: relative;
+  top: -1.8em;
+  left: 0.7em;
+}
+
+.cb-2 {
+  position: relative;
+  top: -1em;
+  left: -0.1em;
+}
+
+.cb-3 {
+  position: relative;
+  top: -0.5em;
+}
+
+.cb-4 {
+  position: relative;
+  bottom: 0.2em;
+}
+.cb-5 {
+  position: relative;
+  bottom: 0.05em;
+}
+
+.logs {
+  width: inherit;
+  height: inherit;
+  background: black;
+  border-left: 4px solid grey;
+  color: white;
+}
